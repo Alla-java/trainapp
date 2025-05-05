@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее имущество</title>
+</head>
+<body>
+<h1>Добавить квартиру</h1>
+<form action="apartment" method="post">
+    <label>Улица: <input type="text" name="street"></label><br>
+    <label>Дом: <input type="text" name="house"></label><br>
+    <label>Корпус: <input type="text" name="building"></label><br>
+    <label>Квартира: <input type="text" name="number"></label><br>
+    <button type="submit">Сохранить квартиру</button>
+</form>
+
+<hr>
+
+<h1>Добавить элемент домашнего имущества</h1>
+<form action="furniture" method="post">
+    <h3>Адрес квартиры:</h3>
+    <label>Улица: <input type="text" name="street"></label><br>
+    <label>Дом: <input type="text" name="house"></label><br>
+    <label>Корпус: <input type="text" name="building"></label><br>
+    <label>Квартира: <input type="text" name="number"></label><br>
+
+    <h3>Элемент имущества:</h3>
+    <label>Название: <input type="text" name="typeName"></label><br>
+    <label>Цена за единицу: <input type="number" step="0.01" name="unitPrice"></label><br>
+    <label>Количество: <input type="number" name="quantity"></label><br>
+    <button type="submit">Сохранить имущество</button>
+</form>
+
+<hr>
+
+<h1>Посмотреть имущество по адресу квартиры</h1>
+<form action="furniture" method="get">
+    <label>Улица: <input type="text" name="street" required></label><br>
+    <label>Дом: <input type="text" name="house" required></label><br>
+    <label>Корпус (необязательно): <input type="text" name="building"></label><br>
+    <label>Квартира: <input type="text" name="number" required></label><br>
+    <button type="submit">Показать имущество</button>
+</form>
+</body>
+</html>
